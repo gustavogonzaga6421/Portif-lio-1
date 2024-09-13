@@ -1,81 +1,138 @@
-* { /* Resetando as configurações de margin e padding aplicadas globalmente */
+/* Resetando as configurações de margin e padding aplicadas globalmente */
+* {
     margin: 0;
     padding: 0;
 }
 
-body { /* Estilo geral da página */
-    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
-    background-color: black; /* Cor de fundo da página */
-    height: 100vh; /* Altura igual a 100% da altura da tela */
-    color: #f6f6f6; /* Cor da fonte */
-    font-family: 'Montserrat', sans-serif; /* Fonte padrão do corpo */
+body {
+    box-sizing: border-box;
+    background-color: black;
+    height: 100vh;
+    color: #f6f6f6;
+    font-family: 'Montserrat', sans-serif;
 }
 
-h1 { /* Estilo para o título principal */
-    color: #22d4f2; /* Cor do texto */
+h1 {
+    color: #22d4f2;
 }
 
-p { /* Estilo para os parágrafos */
-    font-family: 'Courier New', Courier, monospace; /* Tipo de fonte */
-    color: #f6f6f6; /* Cor do texto */
-    text-align: justify; /* Justifica o texto */
+p {
+    font-family: 'Courier New', Courier, monospace;
+    color: #f6f6f6;
+    text-align: justify;
 }
 
-strong.Destaque { /* Estilo para strong com a classe Destaque */
-    color: #f6f6f6; /* Cor do texto */
+strong.Destaque {
+    color: #f6f6f6;
 }
 
-strong.titulo { /* Estilo para strong com a classe Titulo */
-    color: #f6f6f6; /* Cor do texto *
+strong.titulo {
+    color: #f6f6f6;
 }
 
 .titulo_azul {
-    color: #22d4f2; /* Cor azul para o texto */
+    color: #22d4f2;
 }
 
-.Apresentação { /* Estilo para o container principal */
-    margin: 10% 15%; /* Margem em relação às bordas do container */
-    display: flex; /* Define o layout como flexível */
-    flex-direction: row; /* Direção dos itens no layout flexível */
-    align-items: center; /* Alinhamento vertical dos itens */
-    justify-content: space-between; /* Espaço entre os itens */
+.Apresentação {
+    margin: 10% 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.apresentação_conteudo { /* Estilo para a coluna da esquerda */
-    display: flex; /* Define o layout como flexível */
-    flex-direction: column; /* Disposição dos itens em coluna */
-    width: 50%; /* Largura de 50% do container principal */
-    gap: 40px; /* Espaçamento entre os itens dentro do container */
+.apresentação_conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 40px;
 }
 
-.apresentação_links { /* Estilo para o container dos links */
-    display: flex; /* Define o layout como flexível */
-    justify-content: space-between; /* Espaço entre os itens */
+.apresentação_links {
+    display: flex;
+    justify-content: space-between;
 }
 
-.apresentação_conteudo_titulo { /* Estilo para o título dentro da coluna da esquerda */
-    font-size: 36px; /* Tamanho da fonte */
-    font-family: 'Krona One', sans-serif; /* Tipo de fonte */
-    text-align: justify; /* Justifica o enunciado */
+.apresentação_conteudo_titulo {
+    font-size: 36px;
+    font-family: 'Krona One', sans-serif;
+    text-align: justify;
 }
 
-.apresentação_conteudo_texto { /* Estilo para o parágrafo de conteúdo */
-    font-size: 24px; /* Tamanho da fonte */
-    text-align: justify; /* Justifica o texto */
+.apresentação_conteudo_texto {
+    font-size: 24px;
+    text-align: justify;
 }
 
-.apresentação_links_link { /* Estilo para os links dentro da coluna da esquerda */
-    background-color: #22d4f2; /* Cor de fundo do botão */
-    width: 174px; /* Largura do botão */
-    text-align: center; /* Alinhamento do texto dentro do botão */
-    border-radius: 16px; /* Raio da borda do botão */
-    font-size: 24px; /* Tamanho da fonte */
-    font-weight: 600; /* Peso da fonte */
-    padding: 16px; /* Espaçamento interno do botão */
-    text-decoration: none; /* Remove o sublinhado dos links */
-    color: #f6f6f6; /* Cor do texto */
-    font-family: 'Montserrat', sans-serif; /* Tipo de fonte */
-    display: flex; /* Define o layout como flexível */
-    align-items: center; /* Alinhamento vertical dos itens */
-    justify-content: center; /* Alinhamento horizontal dos itens */
+.apresentação_links_link {
+    background-color: #22d4f2;
+    width: 174px;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px;
+    text-decoration: none;
+    color: #f6f6f6;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsividade */
+
+/* Para telas grandes (desktops com resoluções maiores) */
+@media (min-width: 1200px) {
+    .Apresentação {
+        margin: 5% 10%;
+    }
+    .apresentação_conteudo_titulo {
+        font-size: 40px;
+    }
+    .apresentação_conteudo_texto {
+        font-size: 28px;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .Apresentação {
+        margin: 10% 5%;
+        flex-direction: column;
+    }
+    .apresentação_conteudo {
+        width: 100%;
+    }
+    .apresentação_conteudo_titulo {
+        font-size: 32px;
+    }
+    .apresentação_conteudo_texto {
+        font-size: 20px;
+    }
+}
+
+/* Para celulares */
+@media (max-width: 767px) {
+    .Apresentação {
+        margin: 5% 3%;
+        flex-direction: column;
+    }
+    .apresentação_conteudo {
+        width: 100%;
+    }
+    .apresentação_conteudo_titulo {
+        font-size: 28px;
+    }
+    .apresentação_conteudo_texto {
+        font-size: 18px;
+    }
+    .apresentação_links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .apresentação_links_link {
+        width: 100%;
+    }
 }
